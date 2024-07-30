@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/screens/newsPage.dart';
 import 'package:newsapp/widgets/elvatedBtn.dart';
 
 class Categorycheck extends StatelessWidget {
@@ -24,14 +25,38 @@ class Categorycheck extends StatelessWidget {
             crossAxisSpacing: 10,
             mainAxisSpacing: 6,
             children: [
-              btn(lang: "business"),
-              btn(lang: "entertainment"),
-              btn(lang: "general"),
-              btn(lang: "health"),
-              btn(lang: "science"),
-              btn(lang: "sports"),
-              btn(lang: "technology"),
-              btn(lang: "sources"),
+              btn(
+                lang: "business",
+                forward: Newspage(),
+              ),
+              btn(
+                lang: "entertainment",
+                forward: Newspage(),
+              ),
+              btn(
+                lang: "general",
+                forward: Newspage(),
+              ),
+              btn(
+                lang: "health",
+                forward: Newspage(),
+              ),
+              btn(
+                lang: "science",
+                forward: Newspage(),
+              ),
+              btn(
+                lang: "sports",
+                forward: Newspage(),
+              ),
+              btn(
+                lang: "technology",
+                forward: Newspage(),
+              ),
+              btn(
+                lang: "sources",
+                forward: Newspage(),
+              ),
             ],
           ),
         ),
