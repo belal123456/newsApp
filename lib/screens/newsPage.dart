@@ -5,6 +5,14 @@ class Newspage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: ListView.builder(
+        itemCount: 132,
+        itemBuilder: (BuildContext context, int index) {
+          return Text("belal");
+        },
+      ),
+    );
   }
 }

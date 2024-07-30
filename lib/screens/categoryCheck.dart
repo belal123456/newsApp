@@ -3,7 +3,8 @@ import 'package:newsapp/screens/newsPage.dart';
 import 'package:newsapp/widgets/elvatedBtn.dart';
 
 class Categorycheck extends StatelessWidget {
-  const Categorycheck({super.key});
+  const Categorycheck({super.key, required this.cityName});
+  final String cityName;
 
   @override
   Widget build(BuildContext context) {

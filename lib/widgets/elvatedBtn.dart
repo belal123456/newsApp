@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/screens/categoryCheck.dart';
 
 class btn extends StatelessWidget {
   btn({super.key, required this.lang, required this.forward});

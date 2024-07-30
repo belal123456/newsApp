@@ -7,6 +7,7 @@ class Langicon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String countryName;
     return GridView.count(
       crossAxisSpacing: 20,
       mainAxisSpacing: 20,
@@ -14,63 +15,93 @@ class Langicon extends StatelessWidget {
       children: <Widget>[
         btn(
           lang: "United Arab Emirates",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "ae",
+          ),
         ),
         btn(
           lang: "Argentinaal",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "ar",
+          ),
         ),
         btn(
           lang: "Austria",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "ay",
+          ),
         ),
         btn(
           lang: "Belgium",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "be",
+          ),
         ),
         btn(
           lang: "Bulgaria",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "bg",
+          ),
         ),
         btn(
           lang: "Brazil",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "br",
+          ),
         ),
         btn(
           lang: "Canada",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "ca",
+          ),
         ),
         btn(
           lang: "Switzerland",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "ch",
+          ),
         ),
         btn(
           lang: "China",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "cn",
+          ),
         ),
         btn(
           lang: "Colombia",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "co",
+          ),
         ),
         btn(
           lang: "Germany",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "de",
+          ),
         ),
         btn(
           lang: "Egypt",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "eg",
+          ),
         ),
         btn(
           lang: "France",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "fr",
+          ),
         ),
         btn(
           lang: "Greece",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "gr",
+          ),
         ),
         btn(
           lang: "Italy",
-          forward: Categorycheck(),
+          forward: Categorycheck(
+            cityName: "it",
+          ),
         ),
       ],
     );
