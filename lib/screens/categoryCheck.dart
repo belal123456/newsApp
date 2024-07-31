@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/models/newsmodel.dart';
+
 import 'package:newsapp/screens/NewsPage.dart';
-import 'package:newsapp/services/News_service.dart';
+
 import 'package:newsapp/widgets/elvatedBtn.dart';
 
 class Categorycheck extends StatelessWidget {
@@ -30,6 +30,8 @@ class Categorycheck extends StatelessWidget {
             children: [
               btn(
                 lang: "business",
+                flag:
+                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "business",
@@ -37,6 +39,8 @@ class Categorycheck extends StatelessWidget {
               ),
               btn(
                 lang: "entertainment",
+                flag:
+                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "entertainment",
@@ -44,6 +48,8 @@ class Categorycheck extends StatelessWidget {
               ),
               btn(
                 lang: "general",
+                flag:
+                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "general",
@@ -51,6 +57,8 @@ class Categorycheck extends StatelessWidget {
               ),
               btn(
                 lang: "health",
+                flag:
+                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "health",
@@ -58,6 +66,8 @@ class Categorycheck extends StatelessWidget {
               ),
               btn(
                 lang: "science",
+                flag:
+                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "science",
@@ -65,6 +75,8 @@ class Categorycheck extends StatelessWidget {
               ),
               btn(
                 lang: "sports",
+                flag:
+                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "sports",
@@ -72,16 +84,11 @@ class Categorycheck extends StatelessWidget {
               ),
               btn(
                 lang: "technology",
+                flag:
+                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "technology",
-                ),
-              ),
-              btn(
-                lang: "sources",
-                forward: NewsPage(
-                  cityname: cityName,
-                  lang: "sources",
                 ),
               ),
             ],
