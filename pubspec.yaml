@@ -105,6 +105,12 @@ flutter:
     - assets/Flag_of_Peoples_Republic_of_China_Flat_Round-512x512.png
     - assets/Flag_of_Switzerland_Flat_Round-512x512.png
     - assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg
+    - assets/Health-Insurance.jpg
+    - assets/colorful-science-education-background_23-2148490697.jpg
+    - assets/10-25-23.jpg
+    - assets/310621667_212933574403181_2740232191726636357_n.png
+    - assets/media_entertainment.png
+    - assets/Euro_coins_and_banknotes_(cropped).jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

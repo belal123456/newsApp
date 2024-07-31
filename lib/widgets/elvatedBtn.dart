@@ -25,10 +25,10 @@ class btn extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(40),
               image: DecorationImage(image: AssetImage(flag!))),
-          child: Text(
-            lang,
-            style: TextStyle(color: const Color.fromARGB(255, 183, 111, 111)),
-          ),
+          // child: Text(
+          //   lang,
+          //   style: TextStyle(color: const Color.fromARGB(255, 183, 111, 111)),
+          // ),
         ),
       ),
     );

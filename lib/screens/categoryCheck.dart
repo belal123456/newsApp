@@ -30,8 +30,7 @@ class Categorycheck extends StatelessWidget {
             children: [
               btn(
                 lang: "business",
-                flag:
-                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
+                flag: "assets/Euro_coins_and_banknotes_(cropped).jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "business",
@@ -39,8 +38,7 @@ class Categorycheck extends StatelessWidget {
               ),
               btn(
                 lang: "entertainment",
-                flag:
-                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
+                flag: "assets/media_entertainment.png",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "entertainment",
@@ -49,7 +47,7 @@ class Categorycheck extends StatelessWidget {
               btn(
                 lang: "general",
                 flag:
-                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
+                    "assets/310621667_212933574403181_2740232191726636357_n.png",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "general",
@@ -57,8 +55,7 @@ class Categorycheck extends StatelessWidget {
               ),
               btn(
                 lang: "health",
-                flag:
-                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
+                flag: "assets/Health-Insurance.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "health",
@@ -67,7 +64,7 @@ class Categorycheck extends StatelessWidget {
               btn(
                 lang: "science",
                 flag:
-                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
+                    "assets/colorful-science-education-background_23-2148490697.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "science",
@@ -84,8 +81,7 @@ class Categorycheck extends StatelessWidget {
               ),
               btn(
                 lang: "technology",
-                flag:
-                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
+                flag: "assets/10-25-23.jpg",
                 forward: NewsPage(
                   cityname: cityName,
                   lang: "technology",
