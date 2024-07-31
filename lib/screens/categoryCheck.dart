@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/newsmodel.dart';
-import 'package:newsapp/screens/newsPage.dart';
+import 'package:newsapp/screens/NewsPage.dart';
 import 'package:newsapp/services/News_service.dart';
 import 'package:newsapp/widgets/elvatedBtn.dart';
 
@@ -30,56 +30,56 @@ class Categorycheck extends StatelessWidget {
             children: [
               btn(
                 lang: "business",
-                forward: Newspage(
+                forward: NewsPage(
                   cityname: cityName,
                   lang: "business",
                 ),
               ),
               btn(
                 lang: "entertainment",
-                forward: Newspage(
+                forward: NewsPage(
                   cityname: cityName,
                   lang: "entertainment",
                 ),
               ),
               btn(
                 lang: "general",
-                forward: Newspage(
+                forward: NewsPage(
                   cityname: cityName,
                   lang: "general",
                 ),
               ),
               btn(
                 lang: "health",
-                forward: Newspage(
+                forward: NewsPage(
                   cityname: cityName,
                   lang: "health",
                 ),
               ),
               btn(
                 lang: "science",
-                forward: Newspage(
+                forward: NewsPage(
                   cityname: cityName,
                   lang: "science",
                 ),
               ),
               btn(
                 lang: "sports",
-                forward: Newspage(
+                forward: NewsPage(
                   cityname: cityName,
                   lang: "sports",
                 ),
               ),
               btn(
                 lang: "technology",
-                forward: Newspage(
+                forward: NewsPage(
                   cityname: cityName,
                   lang: "technology",
                 ),
               ),
               btn(
                 lang: "sources",
-                forward: Newspage(
+                forward: NewsPage(
                   cityname: cityName,
                   lang: "sources",
                 ),

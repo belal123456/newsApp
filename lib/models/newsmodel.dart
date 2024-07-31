@@ -1,30 +1,35 @@
 class NewsModel {
-  final String Source;
+  final String source;
   final String author;
-  final String Title;
+  final String title;
   final String description;
-  final String Urll;
-  final String Imagesrc;
-  final String Date;
+  final String url;
+  final String urlToImage;
+  final String publishedAt;
 
   NewsModel({
-    required this.Source,
+    required this.source,
     required this.author,
-    required this.Title,
+    required this.title,
     required this.description,
-    required this.Urll,
-    required this.Imagesrc,
-    required this.Date,
+    required this.url,
+    required this.urlToImage,
+    required this.publishedAt,
   });
 
-  factory NewsModel.fromjson(Map<String, dynamic> jsondata) {
+  factory NewsModel.fromJson(Map<String, dynamic> json) {
     return NewsModel(
-        author: jsondata["articles"][0]["author"],
-        Title: jsondata['articles'][0]['title'],
-        description: jsondata['articles'][0]['title'],
-        Urll: jsondata['articles'][0]['title'],
-        Imagesrc: jsondata['articles'][0]['title'],
-        Source: jsondata['articles'][0]['title'],
-        Date: jsondata['articles'][0]['title']);
+      source: json['source']['name'] ?? 'Unknown Source',
+      author: json['author'] ?? 'Unknown Author',
+      title: json['title'] ?? 'No Title',
+      description: json['description'] ?? 'No Description',
+      url: json['url'] ?? '',
+      urlToImage: json['urlToImage'] ?? '',
+      publishedAt: json['publishedAt'] ?? '',
+    );
+  }
+
+  static List<NewsModel> fromJsonList(List<dynamic> jsonList) {
+    return jsonList.map((json) => NewsModel.fromJson(json)).toList();
   }
 }

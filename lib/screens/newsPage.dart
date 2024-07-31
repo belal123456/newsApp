@@ -1,66 +1,67 @@
-// import 'package:flutter/material.dart';
-// import 'package:newsapp/models/newsmodel.dart';
-// import 'package:newsapp/services/News_service.dart';
-
-// class Newspage extends StatelessWidget {
-//   const Newspage({super.key, required this.cityname, required this.lang});
-//   final String cityname;
-//   final String lang;
-//   getdata() async {
-//     newsServices services = newsServices();
-//     NewsModel news = await services.getNews(country: cityname, Topic: lang);
-//     return news.Title;
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         appBar: AppBar(),
-//         body: ElevatedButton(
-//           child: Text("belal"),
-//           onPressed: () {
-//             getdata() async {
-//               newsServices services = newsServices();
-//               NewsModel news =
-//                   await services.getNews(country: cityname, Topic: lang);
-//               return print(news.Title);
-//             }
-//           },
-//         ));
-//   }
-// }
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/newsmodel.dart';
 import 'package:newsapp/services/News_service.dart';
+import 'package:newsapp/widgets/newsViews.dart';
 
-class Newspage extends StatelessWidget {
+class NewsPage extends StatefulWidget {
   final String cityname;
   final String lang;
 
-  const Newspage({super.key, required this.cityname, required this.lang});
+  const NewsPage({Key? key, required this.cityname, required this.lang})
+      : super(key: key);
+
+  @override
+  _NewsPageState createState() => _NewsPageState();
+}
+
+class _NewsPageState extends State<NewsPage> {
+  List<NewsModel>? _news;
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
 
   Future<void> getData() async {
     newsServices services = newsServices();
     try {
-      NewsModel news = await services.getNews(country: cityname, Topic: lang);
-      print(news.Title); // Output the title to the console
+      List<NewsModel> news =
+          await services.getNews(country: widget.cityname, Topic: widget.lang);
+      setState(() {
+        _news = news;
+        _isLoading = false;
+      });
     } catch (error) {
       print("Error fetching news: $error");
+      setState(() {
+        _isLoading = false;
+      });
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Check API")),
-      body: Center(
-        child: ElevatedButton(
-          child: Text("Fetch News"),
-          onPressed: () {
-            getData();
-          },
-        ),
-      ),
+      appBar: AppBar(title: Text("News")),
+      body: _isLoading
+          ? Center(child: CircularProgressIndicator())
+          : _news == null
+              ? Center(child: Text("No data available"))
+              : ListView.builder(
+                  itemCount: _news!.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final article = _news![index];
+                    print(article.url);
+                    return Newsviews(
+                      source: article.author,
+                      imageUrl: article.url,
+                      title: article.title,
+                      publishedAt: article.publishedAt,
+                    );
+                  },
+                ),
     );
   }
 }
