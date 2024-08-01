@@ -3,8 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:newsapp/widgets/categoryFields.dart';
 
 class Categorycheck extends StatelessWidget {
-  const Categorycheck({super.key, required this.cityName});
+  const Categorycheck(
+      {super.key,
+      required this.cityName,
+      required this.sport,
+      required this.science,
+      required this.business,
+      required this.technology,
+      required this.health,
+      required this.entertainment,
+      required this.general});
   final String cityName;
+  final String sport;
+  final String science;
+  final String business;
+  final String technology;
+  final String health;
+  final String entertainment;
+  final String general;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +44,7 @@ class Categorycheck extends StatelessWidget {
               citName: cityName,
               CAtegory: "sports",
               colorss: Colors.brown.shade100,
-              category: "sports",
+              category: sport,
               icon: Icons.sports_esports_sharp,
             ),
           ),
@@ -38,7 +54,7 @@ class Categorycheck extends StatelessWidget {
             child: Categoryfields(
               citName: cityName,
               colorss: Colors.brown.shade200,
-              category: "science ",
+              category: science,
               icon: Icons.science_rounded,
               CAtegory: 'science',
             ),
@@ -50,7 +66,7 @@ class Categorycheck extends StatelessWidget {
               citName: cityName,
               CAtegory: "business",
               colorss: Colors.brown.shade300,
-              category: "business",
+              category: business,
               icon: Icons.business_center_rounded,
             ),
           ),
@@ -61,7 +77,7 @@ class Categorycheck extends StatelessWidget {
               citName: cityName,
               CAtegory: "technology",
               colorss: Colors.brown.shade400,
-              category: "technology",
+              category: technology,
               icon: Icons.airplane_ticket_sharp,
             ),
           ),
@@ -72,7 +88,7 @@ class Categorycheck extends StatelessWidget {
               citName: cityName,
               CAtegory: "health",
               colorss: Colors.brown.shade500,
-              category: "health",
+              category: health,
               icon: Icons.health_and_safety,
             ),
           ),
@@ -83,7 +99,7 @@ class Categorycheck extends StatelessWidget {
               citName: cityName,
               CAtegory: "entertainment",
               colorss: Colors.brown.shade600,
-              category: "entertainment",
+              category: entertainment,
               icon: Icons.catching_pokemon,
             ),
           ),
@@ -94,7 +110,7 @@ class Categorycheck extends StatelessWidget {
               citName: cityName,
               CAtegory: "general",
               colorss: Colors.brown.shade700,
-              category: "general",
+              category: general,
               icon: Icons.all_out_sharp,
             ),
           ),
