@@ -35,6 +35,7 @@ dependencies:
   url_launcher: ^6.3.0
   webview_flutter: ^3.0.4
   flutter_svg: ^1.1.0
+  flutter_icons_null_safety: ^1.1.0
 
 dev_dependencies:
   flutter_test:

@@ -30,56 +30,51 @@ class Newsviews extends StatelessWidget {
       onTap: _launchURL,
       child: Column(
         children: [
-          // Container(
-          //   width: double.infinity,
-          //   height: 300,
-          //   decoration: BoxDecoration(
-          //     image: DecorationImage(
-          //       fit: BoxFit.cover,
-          //       image: NetworkImage(imageUrl),
-          //     ),
-          //     border: Border.all(width: 2, color: Colors.white),
-          //     borderRadius: BorderRadius.all(Radius.circular(20)),
-          //   ),
-          //   child:,
-          // ),
-          SizedBox(height: 20),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      source,
-                      style:
-                          TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Text(
-                        title,
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Colors.brown.withOpacity(.13),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.brown, width: 2)),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        source,
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w700),
+                            fontSize: 23, fontWeight: FontWeight.bold),
                       ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      publishedAt,
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                  SizedBox(
+                    height: 23,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          title,
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        publishedAt,
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           )
         ],

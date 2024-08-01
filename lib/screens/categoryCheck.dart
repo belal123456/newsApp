@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:newsapp/screens/NewsPage.dart';
-
-import 'package:newsapp/widgets/elvatedBtn.dart';
+import 'package:newsapp/widgets/categoryFields.dart';
 
 class Categorycheck extends StatelessWidget {
   const Categorycheck({super.key, required this.cityName});
@@ -20,77 +18,98 @@ class Categorycheck extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontSize: 32),
         )),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        child: Center(
-          child: GridView.extent(
-            maxCrossAxisExtent: 200,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 6,
-            children: [
-              btn(
-                lang: "business",
-                flag: "assets/Euro_coins_and_banknotes_(cropped).jpg",
-                forward: NewsPage(
-                  cityname: cityName,
-                  lang: "business",
-                ),
-              ),
-              btn(
-                lang: "entertainment",
-                flag: "assets/media_entertainment.png",
-                forward: NewsPage(
-                  cityname: cityName,
-                  lang: "entertainment",
-                ),
-              ),
-              btn(
-                lang: "general",
-                flag:
-                    "assets/310621667_212933574403181_2740232191726636357_n.png",
-                forward: NewsPage(
-                  cityname: cityName,
-                  lang: "general",
-                ),
-              ),
-              btn(
-                lang: "health",
-                flag: "assets/Health-Insurance.jpg",
-                forward: NewsPage(
-                  cityname: cityName,
-                  lang: "health",
-                ),
-              ),
-              btn(
-                lang: "science",
-                flag:
-                    "assets/colorful-science-education-background_23-2148490697.jpg",
-                forward: NewsPage(
-                  cityname: cityName,
-                  lang: "science",
-                ),
-              ),
-              btn(
-                lang: "sports",
-                flag:
-                    "assets/sports-logo-design-template-f99bdb42b4e33a834caa63b5b999fc39_screen.jpg",
-                forward: NewsPage(
-                  cityname: cityName,
-                  lang: "sports",
-                ),
-              ),
-              btn(
-                lang: "technology",
-                flag: "assets/10-25-23.jpg",
-                forward: NewsPage(
-                  cityname: cityName,
-                  lang: "technology",
-                ),
-              ),
-            ],
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Spacer(flex: 2),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Categoryfields(
+              citName: cityName,
+              CAtegory: "sports",
+              colorss: Colors.brown.shade100,
+              category: "sports",
+              icon: Icons.sports_esports_sharp,
+            ),
           ),
-        ),
+          Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Categoryfields(
+              citName: cityName,
+              colorss: Colors.brown.shade200,
+              category: "science ",
+              icon: Icons.science_rounded,
+              CAtegory: 'science',
+            ),
+          ),
+          Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Categoryfields(
+              citName: cityName,
+              CAtegory: "business",
+              colorss: Colors.brown.shade300,
+              category: "business",
+              icon: Icons.business_center_rounded,
+            ),
+          ),
+          Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Categoryfields(
+              citName: cityName,
+              CAtegory: "technology",
+              colorss: Colors.brown.shade400,
+              category: "technology",
+              icon: Icons.airplane_ticket_sharp,
+            ),
+          ),
+          Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Categoryfields(
+              citName: cityName,
+              CAtegory: "health",
+              colorss: Colors.brown.shade500,
+              category: "health",
+              icon: Icons.health_and_safety,
+            ),
+          ),
+          Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Categoryfields(
+              citName: cityName,
+              CAtegory: "entertainment",
+              colorss: Colors.brown.shade600,
+              category: "entertainment",
+              icon: Icons.catching_pokemon,
+            ),
+          ),
+          Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Categoryfields(
+              citName: cityName,
+              CAtegory: "general",
+              colorss: Colors.brown.shade700,
+              category: "general",
+              icon: Icons.all_out_sharp,
+            ),
+          ),
+          Spacer(flex: 2),
+        ],
       ),
     );
   }
 }
+
+//  btn(
+//                 lang: "technology",
+//                 flag: "assets/10-25-23.jpg",
+//                 forward: NewsPage(
+//                   cityname: cityName,
+//                   lang: "technology",
+//                 ),
+//               ),
